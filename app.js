@@ -33,7 +33,8 @@ app.get('/', (req, res) => {
 
 // Route to handle form submission
 app.post('/add', (req, res) => {
-    const task = req.body.task;
+    res.redirect('/');
+    /*const task = req.body.task;
 
     if (!task) {
         res.send('Task cannot be empty!');
@@ -45,7 +46,7 @@ app.post('/add', (req, res) => {
         if (err) throw err;
         console.log("Task added successfully");
         res.redirect('/');
-    });
+    });*/
 });
 
 // Start the server
