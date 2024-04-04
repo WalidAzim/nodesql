@@ -39,13 +39,14 @@ app.post('/add', (req, res) => {
         res.send('Task cannot be empty!');
         return;
     }
-
+    res.redirect('/');
+/*
     const query = "INSERT INTO tasks (task) VALUES (?)";
     connection.query(query, [task], (err, result) => {
         if (err) throw err;
         console.log("Task added successfully");
         res.redirect('/');
-    });
+    });*/
 });
 
 // Start the server
