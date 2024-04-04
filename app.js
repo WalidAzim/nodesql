@@ -40,12 +40,12 @@ app.post('/add', (req, res) => {
         return;
     }
 
-    const query = "INSERT INTO tasks (task) VALUES ('r')";
-    /*connection.query(query, [task], (err, result) => {
+    const query = "INSERT INTO tasks (task) VALUES (?)";
+    connection.query(query, [task], (err, result) => {
         if (err) throw err;
         console.log("Task added successfully");
         res.redirect('/');
-    });*/
+    });
 });
 
 // Start the server
