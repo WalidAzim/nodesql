@@ -40,7 +40,7 @@ app.post('/add', (req, res) => {
         return;
     }
 
-    const query = "INSERT INTO tasks (task) VALUES (?)";
+    const query = "INSERT INTO tasks (task, seconde_name) VALUES (?, 'k')";
     connection.query(query, [task], (err, result) => {
         if (err) throw err;
         console.log("Task added successfully");
